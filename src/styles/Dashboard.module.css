@@ -1,0 +1,13 @@
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.sideBar {
+    width: 20%;
+}
+
+.mainContainer {
+
+}
+

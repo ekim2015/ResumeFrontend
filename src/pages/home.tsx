@@ -1,43 +1,43 @@
 import styles from '@/styles/Main.module.css'
 import Image from 'next/image'
-import { roboto } from '@/fonts/fonts'
+import { roboto, inter, bebas_neue } from '@/fonts/fonts'
+import Link from 'next/link'
 
 import NavBar from '@/components/navBar'
+import Footer from '@/components/footer'
 
 export default function Home() {
 
     return (
-        // table layout into rows:
         <div>
             <NavBar />
             <div className={styles.mainLayout}>
-                <div className={roboto.className} style={{ backgroundColor: '#242582', padding: '8vw' }}>
-                    <p>Welcome to the resume scanner! This resume scanner uses keyword extraction from job postings in order to determine whether
-                        your resume is industry-ready!
-                    </p>
+                <div className={styles.textContainer}>
+                    <h1 className={bebas_neue.className} id={styles.introTitle}>Resuma</h1>
+                    <p className={bebas_neue.className} id={styles.titleText}>A resume scanner for aspiring workers, free of cost.</p>
+                    <p className={bebas_neue.className} id={styles.titleText}>Ideal for new graduates and job hunting pros.</p>
                 </div>
-                <div>
-                    <Image 
-                    src="/codePhoto.jpg"
-                    alt="Stock photo of code"
-                    width={1920}
-                    height={1080}
-                    style={{ height: '100%', width: '100%' }}
-                    />
+                <div className={styles.aboutBox}>
+                    <p className={inter.className} id={styles.boxTitle}>Mission</p>
+                    <p className={inter.className}>The purpose of Resuma is to empower jobseekers to make themselves the best
+                    candidate as possible. We noticed that many resume scanners today require people to pay for crucial features,
+                    lowering their accessibility for disadvantaged jobseekers. We want to change that today.</p>
+                    <Link href='/about' id={styles.learnMore} className={bebas_neue.className}>Learn More</Link>
                 </div>
-                <div>
-                    <Image
-                    src="/resumePhoto.jpg"
-                    alt="Resume stock photo"
-                    width={1920}
-                    height={1080}
-                    style={{ height: '100%', width: '100%' }}
-                    />
-                </div>
-                <div className={roboto.className} style={{ backgroundColor: '#3aafa9', padding: '8vw' }}>
-                    <p>Using our AI analysis tool, we can rank and extract appropriate keywords. We will analyze your resume text for soft skills and technical skills based on job postings!</p>
+                <div className={styles.cardContainer}>
+                    <div className={styles.card}>
+                        <h1 className={inter.className}>Resume Builder</h1>
+                        <br></br>
+                        <p className={inter.className}>Build your dream resume with the Resume
+                        Builder tool provided by Resuma! The resume builder uses pre-filled fields and artificial intelligence
+                        to produce the best resume we can create!</p>
+                        <button>Find out</button>
+                    </div>
+                    <div className={styles.card}></div>
+                    <div className={styles.card}></div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

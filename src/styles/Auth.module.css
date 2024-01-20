@@ -1,0 +1,58 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vw;
+    border: 4vw orange;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, darkgrey, white)
+}
+
+.centerBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10vw;
+    height: 30vw;
+    width: 30vw;
+    border: 0.2vw solid black;
+    box-shadow: 2px 2px 2px darkgrey;
+    background-color: #F5F5DC;
+    padding: 5vw;
+}
+
+.centerBox input {
+    height: 2vw;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.centerBox button {
+    background-color: #36454F;
+    padding: 0.3vw;
+    margin-top: 0.5vw;
+    width: 5vw;
+    color: white;
+}
+
+.centerBox button:hover {
+    background-color: black;
+}
+
+.centerBox button:active {
+    box-shadow: 1px 1px 1px black;
+}
+
+.buttonLevel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#forgot {
+    margin-left: auto;
+}
+
+#forgot:hover {
+    color: blue;
+}

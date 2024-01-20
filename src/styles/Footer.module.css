@@ -1,0 +1,8 @@
+.main {
+    display: grid;
+    grid-template-columns: 50vw 25vw 25vw;
+    width: 100%;
+    background-color: #404040;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}

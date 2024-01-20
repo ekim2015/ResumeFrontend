@@ -1,5 +1,8 @@
 import { useState } from 'react'
-import styles from '@/styles/Login.module.css'
+import { redirect } from 'next/navigation'
+import styles from '@/styles/Auth.module.css'
+import { inter, roboto } from '@/fonts/fonts'
+import Link from 'next/link'
 
 async function loginHandler() {
     let inputUser = document.getElementById("username").value
@@ -23,7 +26,8 @@ async function loginHandler() {
         .then((res) => res.json())
         .then((data) => console.log(data))
         .then(() => {
-            console.log("Login successful!")
+            // if we can login and sign the token, then redirect
+            redirect('/auth/verify')
         })
         .catch((e) => { console.log(e) })
     }    
@@ -32,12 +36,16 @@ async function loginHandler() {
 export default function LoginPage() {
     return (
         <div className={styles.formContainer}>
-            <div>
-                <label>Username/Email: </label>
+            <div className={styles.centerBox}>
+                <label className={roboto.className}>Username/Email: </label>
                 <input type="text" id="username"></input>
-                <label>Password: </label>
+                <br></br>
+                <label className={roboto.className}>Password: </label>
                 <input type="password" id="password"></input>
-                <button onClick={loginHandler}>Submit</button>
+                <div className={styles.buttonLevel}>
+                    <button onClick={loginHandler}>Submit</button>
+                    <Link href={'/auth/forgot'} className={roboto.className} id={styles.forgot}>Forgot password?</Link>
+                </div>
             </div>
         </div>
     )

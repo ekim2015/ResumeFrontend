@@ -1,9 +1,108 @@
 .mainLayout {
-    display: grid;
-    grid-template-columns: 40% 60%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding-top: 2vw;
+    overflow-y: auto;
+    background-color: #daa125;
 }
 
 .mainLayout p {
     font-size: 24px;
     color: white;
+}
+
+.aboutBox {
+    border: 0.1vw solid black;
+    border-radius: 1vw 1vw;
+    background-color: white;
+    width: 70vw;
+    height: 20vw;
+    padding-left: 2vw;
+    padding-top: 2vw;
+    margin-top: 10vw;
+    align-self: center;
+    margin-bottom: 20vw;
+}
+
+.aboutBox p {
+    color: black;
+    font-weight: 600;
+    padding-right: 2vw;
+    padding-bottom: 2vw;
+}
+
+.cardContainer {
+    display: grid;
+    padding-left: 5vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: #25daa1;
+    width: 100%;
+    height: 50vw;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 90%;
+    height: 80%;
+    padding-top: 2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    align-items: center;
+    border: 0.2px solid black;
+}
+
+.card p {
+    color: black;
+}
+
+.card button {
+    margin-top: auto;
+    padding: 1vw 2vw 1vw;
+    background-color: black;
+    border: 1px solid whitesmoke;
+    color: white;
+    margin-bottom: 2vw;
+    font-size: 1vw;
+}
+
+.card button:active {
+    box-shadow: 1.5px 1.5px 1.5px darkgrey;
+}
+
+.textContainer {
+    padding-left: 5vw;
+    font-weight: bold;
+    color: teal;
+}
+
+#introTitle {
+    font-size: 10vw;
+}
+
+#titleText {
+    font-size: 8vw;
+    line-height: 1em;
+}
+
+#boxTitle {
+    font-weight: bold;
+    font-size: 2.5vw;
+    padding-bottom: 1vw;
+}
+
+#learnMore {
+    font-size: 2vw;
+}
+
+#learnMore:hover {
+    color: purple;
+}
+
+#learnMore:active {
+    text-shadow: 0.3px 0.3px 0.3px black;
 }

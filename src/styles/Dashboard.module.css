@@ -1,13 +1,111 @@
 .flexContainer {
     display: flex;
+    position: absolute;
+    background-color: #EDEADE;
     flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.aboutContainer {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+}
+
+.uploadContainer {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.aboutBox {
+    border: solid green 1px;
+    background-color: white;
+    box-shadow: 2px 2px 2px black;
+    padding-left: 2%;
+    width: 90%;
+    height: 90%;
+}
+
+
+.itemsList {
+    height: 90%;
+    width: 75vw;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.item {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
 }
 
 .sideBar {
-    width: 20%;
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    border-right: 1px solid black;
+}
+
+.btngrad {
+    background-image: linear-gradient(to right, #16A085 0%, #F4D03F  51%, #16A085  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btngrad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+ 
+
+.linkButton {
+    border: solid black 2px;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    text-align: center;
+}
+
+.linkButton:hover {
+    color: lightgrey;
+    background-color: grey;
 }
 
 .mainContainer {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40% 60%;
+    border: solid green 1px;
+}
 
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid orange 5px;
+}
+
+#uploadTitle {
+    font-size: 20px;
+    font-weight: bold;
 }
 

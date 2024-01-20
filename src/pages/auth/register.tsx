@@ -1,4 +1,5 @@
-import styles from '@/styles/Login.module.css'
+import styles from '@/styles/Auth.module.css'
+import { inter, roboto } from '@/fonts/fonts'
 
 async function registrationHandler() {
     let inputUser = document.getElementById("username").value
@@ -31,13 +32,14 @@ async function registrationHandler() {
 export default function RegistrationPage() {
     return (
         <div className={styles.formContainer}>
-            <div>
-                <label>Username: </label>
+            <div className={styles.centerBox}>
+                <label className={roboto.className}>Username: </label>
                 <input type="text" id="username"></input>
-                <label>Email: </label>
+                <label className={roboto.className}>Email: </label>
                 <input type="text" id="email"></input>
-                <label>Password: </label>
+                <label className={roboto.className}>Password: </label>
                 <input type="password" id="password"></input>
+                <br></br>
                 <button onClick={registrationHandler}>Submit</button>
             </div>
         </div>

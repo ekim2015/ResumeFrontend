@@ -1,22 +1,33 @@
 .navbarContainer {
+    height: 4vw;
     display: flex;
+    gap: 2vw;
+    padding-right: 1vw;
     flex-direction: row;
     justify-content: flex-end;
-    background: whitesmoke;
+    align-items: center;
+    background: #daa125;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-button.nav {
-    border: 1px black;
-    border-style: none solid none none;
-    padding-left: -15%;
-    padding-right: -15%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    text-align: center;
-    font-size: 24px;
-    display: inline-block;
+.linkButton:hover {
+    text-decoration: underline;
 }
 
-.navbarContainer button:active {
-    background: blueviolet;
+#logo {
+    padding-left: 1vw;
+    margin-right: auto;
+    font-size: 2vw;
+    color: teal;
+    font-weight: bold;
 }
+
+#dashButton {
+    background-color: black;
+    color: white;
+    padding: 0.5vw;
+}
+

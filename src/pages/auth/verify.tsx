@@ -1,22 +1,35 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import styles from '@/styles/Auth.module.css'
 
-async function Verification() {
-    fetch('http://localhost:8080/auth/verify', {
-        method: "POST"
-    })
-    .then((res) => res.json())
-    .catch((e) => console.log(e))
-}
-
 export default function VerifyPage() {
-    useEffect(() => {
-        Verification().catch((e) => console.log(e))
-    })
+    let [ verified, setVerified ] = useState(false)
     
-    return (
-        <div className={styles.formContainer}>
-            <h1>Temporary verification page...</h1>
-        </div>
-    )
+    useEffect(() => {
+        fetch('http://localhost:8080/auth/verify', {
+            method: "GET",
+            credentials: "include"
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data)
+            setVerified(data['verified'])
+        })
+        .catch((e) => console.log(e))
+    })
+
+    console.log(`Status: ${verified}`)
+    
+    if (!verified) {
+        return (
+            <div>
+                <h1>Temporary verification page...</h1>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <h1>Verified!</h1>
+            </div>
+        )
+    }
 }

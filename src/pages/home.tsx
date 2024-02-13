@@ -1,6 +1,7 @@
 import styles from '@/styles/Main.module.css'
 import Image from 'next/image'
 import { roboto, inter, bebas_neue } from '@/fonts/fonts'
+import { motion, useScroll } from 'framer-motion'
 import Link from 'next/link'
 
 import NavBar from '@/components/navBar'
@@ -31,7 +32,7 @@ export default function Home() {
                         <p className={inter.className}>Build your dream resume with the Resume
                         Builder tool provided by Resuma! The resume builder uses pre-filled fields and artificial intelligence
                         to produce the best resume we can create!</p>
-                        <button>Find out</button>
+                        <button className={inter.className}>Builder</button>
                     </div>
                     <div className={styles.card}></div>
                     <div className={styles.card}></div>

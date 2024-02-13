@@ -1,4 +1,6 @@
 import styles from '@/styles/Auth.module.css'
+import Link from 'next/link'
+
 import { inter, roboto } from '@/fonts/fonts'
 
 async function registrationHandler() {
@@ -31,16 +33,27 @@ async function registrationHandler() {
 
 export default function RegistrationPage() {
     return (
-        <div className={styles.formContainer}>
-            <div className={styles.centerBox}>
-                <label className={roboto.className}>Username: </label>
-                <input type="text" id="username"></input>
-                <label className={roboto.className}>Email: </label>
-                <input type="text" id="email"></input>
-                <label className={roboto.className}>Password: </label>
-                <input type="password" id="password"></input>
-                <br></br>
-                <button onClick={registrationHandler}>Submit</button>
+        <div className={`${styles.formContainer} ${roboto.className}`}>
+            <div className={styles.boxContainer}>
+                <div className={styles.leftBox}>
+                    <img src='/watercolor-2681039_1920.jpg' />
+                </div>
+                <div className={styles.centerBox}>
+                    <div className={styles.titleArea}>
+                        <h1>Register</h1>
+                        <div>
+                            <p>Have an account? <span><Link href='/auth/login'>Login</Link></span></p>
+                        </div>
+                    </div>
+                    <label className={roboto.className}>Username: </label>
+                    <input type="text" id="username"></input>
+                    <label className={roboto.className}>Email: </label>
+                    <input type="text" id="email"></input>
+                    <label className={roboto.className}>Password: </label>
+                    <input type="password" id="password"></input>
+                    <br></br>
+                    <button onClick={registrationHandler}>Submit</button>
+                </div>
             </div>
         </div>
     )

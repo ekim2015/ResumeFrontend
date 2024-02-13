@@ -1,0 +1,50 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    gap: 5%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: #F5F5F5;
+}
+
+.halfContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5%;
+    padding-top: 2%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    border: 1px solid black;
+}
+
+.listedColumn {
+    padding-left: 3%;
+    width: 50%;
+}
+
+.documentColumn {
+    width: 50%;
+}
+
+.itemBubble {
+    display:flex;
+    gap: 80%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 1px grey;
+    align-items: center;
+    padding: 10px;
+}
+
+.itemGrid {
+    display: grid;
+    width: 50%;
+    gap: 5%;
+    grid-template-columns: 33% 33% 34%;
+}

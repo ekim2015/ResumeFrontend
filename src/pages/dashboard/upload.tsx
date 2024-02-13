@@ -15,12 +15,21 @@ export default function DashUpload() {
     return (
         <div className={styles.aboutContainer}>
             <Sidebar />
-            <div className={styles.itemsList}>
-                <div className={styles.item} id='uploadTitle'><h1>List of Uploaded Resumes</h1></div>
-                {mappedItems}
-            </div>
-            <div>
-                <button className={styles.btngrad}>Upload</button>
+            <div className={styles.mainContainer}>
+                <div className={styles.topContainer}>
+                    <div className={styles.descriptionContainer}>
+                        <h1 className={roboto.className}>Upload</h1>
+                        <p className={roboto.className}>This tab is for uploading your resume. Files of .pdf, .doc, .docx, and .txt of up to 10 MB in size are allowed.</p>
+                    </div>
+                    <div className={styles.side}>
+                        <button className={[styles.styledButton, roboto.className].join(' ')}>Upload</button>
+                    </div>
+                </div>
+                <div className={styles.listContainer}>
+                    <div className={styles.list}>
+                        {mappedItems}
+                    </div>
+                </div>
             </div>
         </div>
     )
